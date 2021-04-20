@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>||GRIP TASK_3||SPARKS FOUNDATION||</title>
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	    <link href="https://fonts.googleapis.com/css?family=Anaheim" rel="stylesheet">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	    <!--<link rel="stylesheet" href="media1.css">-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--for social media icons-->
+
+
+
+
+
+<style>
+	  body,html{
+	    font: 20px Anaheim, sans-serif;
+	    line-height: 1.8;
+	    color: #f5f6f7;
+	    display:inline-table;
+	    justify-content: center;
+	    align-items: center;
+	    min-height: 100vh;
+
+	  }
+		  
+		  h1,h3{
+		  	font: 50px Anaheim, sans-serif;
+		  	color: #6548D0;
+		  	text-align: center;
+			text-decoration:underline;
+
+		  }
+			h2{
+			  	font: 50px Anaheim, sans-serif;
+			  	color:#96CB11;
+			  	text-align: center;
+			  	text-decoration: underline;
+
+			  }
+
+ 
+
+			  p {
+			  	font-size: 16px;
+
+			  }
+			  .margin {
+			  	margin-bottom: 45px;
+			  }
+			  .bg-1 { 
+			    background-color:#F781F3; 
+			    color: #ffffff;
+			  }
+
+			  .bg-2 { 
+			    background-color: #11E6A9; 
+			    color: #ffffff;
+			}
+
+			 .bg-3{
+			 	background-color: #CA4C8F;
+			 }
+			
+			 .bg-4{
+			 	background-color: #262627;
+			 }
+			.container-fluid {
+				    padding-top: 50px;
+				    padding-bottom:20px;
+				  }
+			.navbar {
+				    padding-top: 12px;
+				    padding-bottom: 12px;
+				    border: 0;
+				    border-radius: 0;
+				    margin-bottom: 0;
+				    font-size:25px;
+				    letter-spacing:5px;
+				    background:rgba(1,1,1,1);
+
+				  }
+			.navbar-nav  li a:hover {
+				    color: #FE2E64 !important;
+				    font-size: 20px;
+				    font-family: times new roman;
+				  }
+
+			.navbar-brand {
+				
+				 	font-size: 20px;
+				 	font-family: arial;
+				 	text-decoration: underline;
+				 }
+			
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border:none;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+.box{
+	margin: 10% auto;
+	width: 310px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+
+}
+
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style:preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+
+#carousel:hover{
+	animation-play-state:paused;
+}
+#carousel figure{
+	display:block;
+	position: absolute;
+	width: 280px;
+	height: 160px;
+	left:10px;
+	top:10px;
+	background: black;
+	overflow: hidden;
+	border:solid 5px black;
+}
+img{
+	-webkit-filter:grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+
+}
+
+img:hover{
+	-webkit-filter:grayscale(0);
+	transform: scale(1.3,1.3);
+}
+
+#carousel figure:nth-child(1){transform:rotateY(0deg) translateZ(450px);}
+#carousel figure:nth-child(2){transform:rotateY(40deg) translateZ(450px);}
+#carousel figure:nth-child(3){transform:rotateY(80deg) translateZ(450px);}
+#carousel figure:nth-child(4){transform:rotateY(120deg) translateZ(450px);}
+#carousel figure:nth-child(5){transform:rotateY(160deg) translateZ(450px);}
+#carousel figure:nth-child(6){transform:rotateY(200deg) translateZ(450px);}
+#carousel figure:nth-child(7){transform:rotateY(240deg) translateZ(450px);}
+#carousel figure:nth-child(9){transform:rotateY(280deg) translateZ(450px);}
+#carousel figure:nth-child(8){transform:rotateY(320deg) translateZ(450px);}
+
+
+@keyframes rotation{
+
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform:
+			rotateY(360deg);
+	}
+}
+
+
+.ppp body {
+	display: flex;
+	height:10vh;
+	align-items: center;
+	justify-content: center;
+	background:#262627;
+	/*text-align: center;*/
+}
+
+
+.ppp{
+	display: flex;
+}
+.ppp li{
+	position: relative;
+	display: block;
+	color:#666;
+	font-size:30px;
+	height: 60px;
+	width:60px;
+	background:#171515;
+	line-height: 60px;
+	border-radius: 70%;
+	margin: 0 15px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+ .ppp li:before{
+	position: absolute;
+	content: '';
+	top:0;
+	left:0;
+	background:red;
+	height: 100%;
+	width: 100%;
+	border-radius:70%;
+	z-index: -1;
+	transform: scale(0.9);
+	transition: .5s;
+}
+
+ .ppp li:hover:before{
+	transform: scale(1.3);
+	filter: blur(5px);
+	box-shadow: 0 0 50px #d35400;
+}
+ .ppp li:hover{
+	color:#ffa502;
+	box-shadow: 0 0 50px #d35400;
+	text-shadow: 0 0 50px #d35400;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="task_3.html">
+      	<h1><b><i>SPARKS FOUNDATION--task-3<br><br>NAME:PRATYUSHA MITRA<br></i></b></a></h1>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right"><br>
+        <li><a href="#donate">CAUSES</a></li>
+        <li><a href="#about">PROJECTS</a></li>
+        <li><a href="#about">EVENTS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#gallery">CONTACT US</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+<!-- First Container -->
+<div  id="donate">
+<div class="container-fluid bg-1 text-center">
+  <h1><b><i>"GIVE A BIT.CHANGE A LOT."</i></b></h1>
+      <img src="donate.jpg" class="img-responsive img-circle margin" style="display:inline" alt="sign" width="350" height="350">
+       <div class="pattern">                      
+       <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GzEAcv9NPy1e8L" async> </script> </form>
+      </div>
+</div>
+</div>
+
+<!-- Second Container -->
+<div id="about">
+<div class="container-fluid bg-2 text-center">
+  <h3><i><b>||ABOUT US||</b></i></h3>
+  <img src="bg.jpg"class="img-responsive img-circle margin" style="display:inline" alt="logo" width="350" height="350">
+
+  <p>Sustainability, social equality and the environment are now business problems. And corporate leaders can't depend on governments to solve them..- Peter Senge, Founder, Society for Organisational Learning<br><br>Inspired by Senge's philosophy, a group of young corporate professionals came together in 2002 to set up Smile Foundation to work with grassroots initiatives for effecting positive changes in the lives of underprivileged children, their families and communities.</p>
+
+  <a href="#" class="btn btn-default btn-lg">
+     Back
+  </a>
+</div>
+</div>
+
+<!-- Third Container-->    
+  
+<div class="container-fluid bg-3 text-center">
+  <h3><b><i>||PICTURES||</i></b></h3><br>
+  <div class="box">
+	<div id="carousel">
+		<figure><img src="img1.jpg"></figure>
+		<figure><img src="img2.jpg"></figure>
+		<figure><img src="img3.jpg"></figure>
+		<figure><img src="img4.jpg"></figure>
+		<figure><img src="img5.jpg"></figure>
+		<figure><img src="img6.jpg"></figure>
+		<figure><img src="img7.jpg"></figure>
+		<figure><img src="img9.jpg"></figure>
+		<figure><img src="img8.png"></figure>
+   </div>
+  </div>
+</div>
+
+
+<!--4th container-->
+
+<div class="container-fluid bg-4 text-center">
+	<ul class="ppp">
+  	<li><i class="fab fa-facebook-f"></i></li>
+  	<li><i class="fab fa-twitter"></i></li>
+  	<li><i class="fab fa-instagram"></i></li>
+  	<li><i class="fab fa-linkedin-in"></i></li>
+  	<li><i class="fab fa-youtube"></i></li>
+  	<li><i class="fab fa-whatsapp"></i></li>
+  </ul>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+	
